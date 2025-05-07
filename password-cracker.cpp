@@ -13,7 +13,7 @@ std::string sha256(const std::string& str) {
         ss << std::hex << std::setw(2) << std::setfill('0') << (int)hash[i];
     return ss.str();
 }
-
+ 
 void crackPassword(const std::string& targetHash, const std::string& wordlistFile) {
     std::ifstream infile(wordlistFile);
     if (!infile.is_open()) {
